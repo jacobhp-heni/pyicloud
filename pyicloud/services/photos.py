@@ -804,10 +804,10 @@ class BasePhotoAlbum:
     def photos(self) -> Generator["PhotoAsset", None, None]:
         """Returns the album photos."""
         self._len = None
-        if self._direction == DirectionEnum.DESCENDING:
-            offset: int = len(self) - 1
-        else:
-            offset = 0
+        # if self._direction == DirectionEnum.DESCENDING:
+        #     offset: int = len(self) - 1
+        # else:
+        offset = 0
 
         photos_ids: set[str] = set()
 
@@ -826,10 +826,10 @@ class BasePhotoAlbum:
                 num_results < self.page_size // 2
             ):  # If less than half the page size is returned, we assume we're done
                 break
-            if self._direction == DirectionEnum.DESCENDING:
-                offset = offset - num_results
-            else:
-                offset = offset + num_results
+            # if self._direction == DirectionEnum.DESCENDING:
+            #     offset = offset - num_results
+            # else:
+            offset = offset + num_results
 
     @property
     @abstractmethod
