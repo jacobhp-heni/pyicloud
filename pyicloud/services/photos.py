@@ -822,14 +822,14 @@ class BasePhotoAlbum:
                 yield photo
             if num_results < self.page_size:
                 _LOGGER.debug("Less than page size returned: %d", num_results)
-            if (
-                num_results < self.page_size // 2
-            ):  # If less than half the page size is returned, we assume we're done
-                break
+            # if (
+            #     num_results < self.page_size // 2
+            # ):  # If less than half the page size is returned, we assume we're done
+            #     break
             # if self._direction == DirectionEnum.DESCENDING:
-            offset = offset - num_results
+            # offset = offset - num_results
             # else:
-            # offset = offset + num_results
+            offset = offset + num_results
 
     @property
     @abstractmethod
