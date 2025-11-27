@@ -827,9 +827,9 @@ class BasePhotoAlbum:
             ):  # If less than half the page size is returned, we assume we're done
                 break
             # if self._direction == DirectionEnum.DESCENDING:
-            #     offset = offset - num_results
+            offset = offset - num_results
             # else:
-            offset = offset + num_results
+            # offset = offset + num_results
 
     @property
     @abstractmethod
