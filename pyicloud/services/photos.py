@@ -49,7 +49,7 @@ class AlbumTypeEnum(IntEnum):
 class SmartAlbumEnum(str, Enum):
     """Smart albums names."""
 
-    ALL_PHOTOS = "Library"
+    ALL_PHOTOS = "All Photos"
     BURSTS = "Bursts"
     FAVORITES = "Favorites"
     HIDDEN = "Hidden"
